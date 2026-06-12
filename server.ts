@@ -10,7 +10,7 @@ import { neon } from "@neondatabase/serverless";
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = parseInt(process.env.PORT || "3000");
 
 app.use(express.json({ limit: "50mb" }));
 
